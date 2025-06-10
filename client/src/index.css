@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+*{
+  font-family: "Outfit", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background-color: #0e0e0e;
+  color: #f3f3f3;
+}
+.loader {
+  border-top-color: #22c55e; 
+  animation: spin 1s linear infinite;
+}
+
+
+@theme {
+  --color-primary:#2563eb; 
+}
+
+.rich-text {
+  font-size: 15px;
+  color: #e0e0e0;
+}
+
+.rich-text p {
+  margin-bottom: 16px;
+  color: #ccc;
+}
+
+.rich-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff !important;
+  margin: 32px 0;
+}
+
+.rich-text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #eeeeee !important;
+  margin: 24px 0;
+}
+
+.rich-text h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #dddddd !important;
+  margin: 20px 0;
+}
+
+.rich-text h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #cccccc !important;
+  margin: 16px 0;
+}
+
+.rich-text h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #bbbbbb !important;
+  margin: 12px 0;
+}
+
+.rich-text h6 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #aaaaaa !important;
+  margin: 8px 0;
+}
+
+.rich-text a {
+  color: #18cb96;
+}
+
+.shooting-star-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.shooting-star {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(45deg, white, #18cb96, transparent);
+  opacity: 0.8;
+  transform: rotate(45deg);
+  animation: shoot 4s linear infinite;
+}
+
+@keyframes shoot {
+  0% {
+    top: 10%;
+    left: -10%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    left: 110%;
+    opacity: 0;
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-10px) translateX(5px);
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
