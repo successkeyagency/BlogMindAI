@@ -1,0 +1,50 @@
+# dependencies
+node_modules/
+
+# production
+build/
+dist/
+.next/
+out/
+
+# local env files
+.env
+.env.*.local
+
+# log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# misc
+.DS_Store
+Thumbs.db
+
+# editor settings
+.vscode/
+.idea/
+
+# OS-specific
+*.swp
+*.swo
+
+# testing coverage
+coverage/
+
+# compiled files
+*.tsbuildinfo
+
+# next/image cache
+.next/cache/images/
+
+# optional: Storybook build
+storybook-static/
+
+# optional: Netlify/Vercel/parcel/etc
+.netlify/
+.vercel/
+parcel-cache/
+
+# optional: TypeScript cache
+*.tsbuildinfo
