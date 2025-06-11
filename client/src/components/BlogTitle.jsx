@@ -1,16 +1,19 @@
 import { motion } from 'framer-motion';
 
-const waveText = "Explore Our Latest Blogs";
+const waveText = "Explore Our Blogs";
 
 const BlogTitle = () => {
   return (
-    <div className="text-center mb-14">
+    <div className="text-center mb-14 px-4 sm:px-6 md:px-0">
       <h1
-        className="text-4xl sm:text-5xl font-extrabold 
-        flex justify-center flex-wrap gap-1
-        bg-gradient-to-r from-[#38bdf8] via-white to-[#6366f1]
-        bg-clip-text text-transparent
-        tracking-tight drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]"
+        className="
+          text-2xl xs:text-3xl sm:text-4xl md:text-5xl
+          font-extrabold 
+          flex justify-center flex-wrap gap-1
+          bg-gradient-to-r from-[#38bdf8] via-white to-[#6366f1]
+          bg-clip-text text-transparent
+          tracking-tight drop-shadow-[0_0_6px_rgba(255,255,255,0.2)]
+          "
       >
         {waveText.split("").map((char, index) => (
           <motion.span
@@ -31,7 +34,7 @@ const BlogTitle = () => {
         ))}
       </h1>
 
-      <p className="mt-2 text-blue-500 text-lg font-medium tracking-wide">
+      <p className="mt-2 text-blue-500 text-sm sm:text-base font-medium tracking-wide">
         Created by <span className='text-green-600'>SuccessKeyAgency LLC</span>
       </p>
     </div>
