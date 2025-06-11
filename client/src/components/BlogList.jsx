@@ -26,14 +26,17 @@ const BlogList = () => {
   return (
     <section
       className="
-        px-6 sm:px-10 xl:px-32 py-12 sm:py-16
+        px-4 sm:px-6 lg:px-10 xl:px-32 py-12 sm:py-16
         bg-gradient-to-b from-[#0a0f1c] via-[#0d111e] to-[#050a15]
         text-white
-        min-h-[50vh] lg:min-h-
+        min-h-[50vh] lg:min-h-[70vh]
+        w-full overflow-x-hidden
       "
     >
       <BlogTitle />
-            <div className="flex flex-col lg:flex-row gap-12">
+
+      <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full">
+        {/* Dropdown for mobile */}
         <div className="lg:hidden mb-8 w-full max-w-xs mx-auto">
           <Listbox value={activeCategory} onChange={setActiveCategory}>
             <div className="relative">
@@ -81,6 +84,7 @@ const BlogList = () => {
           </Listbox>
         </div>
 
+        {/* Sidebar categories for desktop */}
         <aside className="hidden lg:block lg:w-64">
           <h2 className="text-white font-semibold mb-6 text-xl tracking-wide">📂 Categories</h2>
           <div className="flex flex-col gap-4">
@@ -114,9 +118,10 @@ const BlogList = () => {
           </div>
         </aside>
 
+        {/* Blog grid */}
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 flex-grow"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 flex-grow"
         >
           {filteredBlogs.length > 0 ? (
             filteredBlogs.map((blog) => <BlogCard key={blog._id} blog={blog} />)

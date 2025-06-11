@@ -8,7 +8,7 @@ const BlogCard = ({ blog }) => {
   return (
     <div
       onClick={() => navigate(`/blog/${_id}`)}
-      className="group cursor-pointer rounded-xl overflow-hidden backdrop-blur-md bg-white/5 border border-white/10 hover:shadow-[0_0_15px_#38bdf8] transition-all duration-300"
+      className="group cursor-pointer rounded-xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-md hover:shadow-[0_0_15px_#38bdf8] transition-all duration-300 w-full max-w-full"
     >
       <div className="relative overflow-hidden aspect-video">
         <img
@@ -21,13 +21,15 @@ const BlogCard = ({ blog }) => {
         </span>
       </div>
 
-      <div className="p-5">
-        <h3 className="text-white font-semibold text-lg leading-tight mb-2 drop-shadow">
+      <div className="p-4 sm:p-5">
+        <h3 className="text-white font-semibold text-base sm:text-lg leading-tight mb-2 drop-shadow">
           {title}
         </h3>
         <p
           className="text-gray-300 text-sm leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: description.slice(0, 100) + '...' }}
+          dangerouslySetInnerHTML={{
+            __html: description.slice(0, 100).trim() + '...',
+          }}
         />
       </div>
     </div>
