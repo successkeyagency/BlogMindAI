@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { blogCategories } from '../assets/assets';
 import BlogCard from './BlogCard';
 import { useAppContext } from '../context/AppContext';
+import BlogTitle from './BlogTitle';
 
 const BlogList = () => {
   const { blogs } = useAppContext();
@@ -14,6 +15,7 @@ const BlogList = () => {
 
   return (
     <section className="min-h-screen w-full px-6 sm:px-10 xl:px-28 py-12">
+      <BlogTitle />
       {/* Filter Dropdown */}
       <div className="w-full flex justify-center mb-10">
         <select
